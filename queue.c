@@ -22,7 +22,7 @@ bool queueCreate(Queue **queue) {
 }
 
 bool enqueue(Queue *queue, int value) {
-    Node *node = malloc(sizeof(Queue));
+    Node *node = malloc(sizeof(Node));
     if (node == NULL) {
         return false;
     }
