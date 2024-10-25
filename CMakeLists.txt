@@ -7,3 +7,5 @@ set(CMAKE_C_STANDARD_REQUIRED TRUE)
 
 
 add_executable(main main.c queue.c)
+
+add_executable(test test.c queue.c)
