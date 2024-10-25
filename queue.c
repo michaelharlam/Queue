@@ -1,6 +1,6 @@
 #include "queue.h"
 
-#include <stbool.h>
+#include <stdbool.h>
 #include <stdlib.h>
 
 typedef struct Node {
