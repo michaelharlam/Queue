@@ -1,4 +1,7 @@
-#ifndef QUEUE_H
-#define QUEUE_H
+#pragma once
 
-#endif //QUEUE_H
+#include <stdbool.h>
+
+typedef struct Queue Queue;
+
+bool queueCreate(Queue **queue);
