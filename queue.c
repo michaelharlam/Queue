@@ -46,8 +46,7 @@ bool isEmpty(Queue *queue) {
     return true;
 }
 
-bool dequeue(Queue* queue, int* value) {
-
+bool dequeue(Queue *queue, int *value) {
     if (!isEmpty(queue)) {
         return false;
     }
@@ -61,4 +60,12 @@ bool dequeue(Queue* queue, int* value) {
     free(back);
 
     return true;
+}
+
+void queueDispose(Queue *queue) {
+    while (!isEmpty(queue)) {
+        int *trash;
+        dequeue(queue, trash);
+    }
+    free(queue);
 }
