@@ -13,7 +13,7 @@ typedef struct Queue {
 } Queue;
 
 bool queueCreate(Queue **queue) {
-    *queue = calloc(2, sizeof(Queue) * 2);
+    *queue = calloc(1, sizeof(Queue));
     if (*queue == NULL) {
         return false;
     }
