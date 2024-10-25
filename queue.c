@@ -53,7 +53,7 @@ bool dequeue(Queue* queue, int* value) {
 
     Node* ptr = queue->front;
 
-    while (prt->next != queue->back) {
+    while (ptr->next != queue->back) {
         ptr = ptr->next;
     }
 
