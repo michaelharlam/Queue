@@ -54,16 +54,11 @@ bool dequeue(Queue* queue, int* value) {
 
     *value = queue->back->value;
 
-    Node* ptr = queue->front;
+    Node *back = queue->back;
 
-    while (ptr->next != queue->back) {
-        ptr = ptr->next;
-    }
+    queue->back = back->next;
 
-    free(ptr->next);
+    free(back);
 
-    queue->back = ptr;
-
-    ptr->next = NULL;
-
+    return true;
 }
