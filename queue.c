@@ -35,3 +35,25 @@ bool enqueue(Queue *queue, int value) {
     queue->front = node;
     return true;
 }
+
+bool dequeue(Queue* queue, int* value) {
+
+    if (!isEmpty(queue)) {
+        return false;
+    }
+
+    *value = queue->back->value;
+
+    Node* ptr = queue->front;
+
+    while (prt->next != queue->back) {
+        ptr = ptr->next;
+    }
+
+    free(ptr->next);
+
+    queue->back = ptr;
+
+    ptr->next = NULL;
+
+}
