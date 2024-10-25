@@ -26,6 +26,9 @@ bool enqueue(Queue *queue, int value) {
         return false;
     }
 
+    node->value = value;
+    node->next = NULL;
+
     if (!isEmpty(queue)) {
         queue->front->next = node;
     } else {
