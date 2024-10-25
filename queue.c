@@ -1,5 +1,4 @@
 #include "queue.h"
-#include <stdlib.h>
 
 typedef struct Node {
 	int value;
@@ -17,5 +16,20 @@ bool queueCreate(Queue **queue) {
     if (*queue == NULL) {
       return false;
     }
+    return true;
+}
+
+bool enqueue(Queue *queue, int value) {
+    Node *node = malloc(sizeof(Queue));
+    if (node == NULL) {
+        return false;
+    }
+
+    if (!isEmpty(queue)) {
+        queue->front->next = node;
+    } else {
+        queue->back = node;
+    }
+    queue->front = node;
     return true;
 }
